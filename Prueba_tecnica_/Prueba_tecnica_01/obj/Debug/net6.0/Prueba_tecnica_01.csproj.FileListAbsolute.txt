@@ -524,3 +524,4 @@ C:\Users\nivek\Desktop\prueba_tecnica\Prueba_tecnica_\Prueba_tecnica_01\obj\Debu
 C:\Users\nivek\Desktop\prueba_tecnica\Prueba_tecnica_\Prueba_tecnica_01\obj\Debug\net6.0\Prueba_tecnica_01.pdb
 C:\Users\nivek\Desktop\prueba_tecnica\Prueba_tecnica_\Prueba_tecnica_01\obj\Debug\net6.0\Prueba_tecnica_01.genruntimeconfig.cache
 C:\Users\nivek\Desktop\prueba_tecnica\Prueba_tecnica_\Prueba_tecnica_01\obj\Debug\net6.0\ref\Prueba_tecnica_01.dll
+C:\Users\nivek\Desktop\prueba_tecnica\Prueba_tecnica_\Prueba_tecnica_01\bin\Debug\net6.0\libman.json

@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Prueba_tecnica_01.Extensions;
 using Prueba_tecnica_01.Models;
 
 namespace Prueba_tecnica_01.Controllers
 {
-    public class MaestroController : Controller
+    public class MaestroController : BaseController
     {
         private readonly Colegio_prueba_tecnicaContext _context;
 
@@ -18,7 +19,6 @@ namespace Prueba_tecnica_01.Controllers
             _context = context;
         }
 
-        // GET: Maestro
         public async Task<IActionResult> Index()
         {
               return _context.Maestros != null ? 
@@ -26,7 +26,6 @@ namespace Prueba_tecnica_01.Controllers
                           Problem("Entity set 'Colegio_prueba_tecnicaContext.Maestros'  is null.");
         }
 
-        // GET: Maestro/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Maestros == null)
@@ -44,13 +43,11 @@ namespace Prueba_tecnica_01.Controllers
             return View(maestro);
         }
 
-        // GET: Maestro/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Maestro/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Apellido")] Maestro maestro)
@@ -59,12 +56,12 @@ namespace Prueba_tecnica_01.Controllers
             {
                 _context.Add(maestro);
                 await _context.SaveChangesAsync();
+                basicNotification("Maestro agregado correctamente!", notificationType.Success);
                 return RedirectToAction(nameof(Index));
             }
             return View(maestro);
         }
 
-        // GET: Maestro/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Maestros == null)
@@ -80,7 +77,6 @@ namespace Prueba_tecnica_01.Controllers
             return View(maestro);
         }
 
-        // POST: Maestro/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellido")] Maestro maestro)
@@ -108,12 +104,12 @@ namespace Prueba_tecnica_01.Controllers
                         throw;
                     }
                 }
+                basicNotification("Maestro actualizado correctamente!", notificationType.Success);
                 return RedirectToAction(nameof(Index));
             }
             return View(maestro);
         }
 
-        // GET: Maestro/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Maestros == null)
@@ -131,7 +127,6 @@ namespace Prueba_tecnica_01.Controllers
             return View(maestro);
         }
 
-        // POST: Maestro/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -147,6 +142,7 @@ namespace Prueba_tecnica_01.Controllers
             }
             
             await _context.SaveChangesAsync();
+            basicNotification("Maestro eliminado correctamente!", notificationType.Success);
             return RedirectToAction(nameof(Index));
         }
 

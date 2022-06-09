@@ -4,11 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="txt-title">Sección de Maestros</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="btn-secction">
+    <a class="btn-create-new" asp-action="Create">Agregar nuevo maestro</a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -31,11 +31,12 @@
                 @Html.DisplayFor(modelItem => item.Apellido)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn-edit" asp-action="Edit" asp-route-id="@item.Id"><i class="bx bx-edit"></i></a>
+                <a class="btn-delete" asp-action="Delete" asp-route-id="@item.Id"><i class="bx bx-trash-alt"></i></a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<partial name="_notificationPartial" />

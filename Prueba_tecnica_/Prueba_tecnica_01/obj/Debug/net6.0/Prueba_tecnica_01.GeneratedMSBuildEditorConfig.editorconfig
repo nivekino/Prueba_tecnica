@@ -23,10 +23,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Alumno/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Alumno/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -35,24 +31,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Maestro/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFlc3Ryb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Maestro/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFlc3Ryb1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Maestro/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFlc3Ryb1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Maestro/Edit.cshtml]
@@ -71,10 +55,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYXN4QWx1bW5vXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/MateriasxAlumno/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYXN4QWx1bW5vXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/MateriasxAlumno/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYXN4QWx1bW5vXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -91,10 +71,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Materia/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYVxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Materia/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0ZXJpYVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -105,6 +81,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Shared/_NotificationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nivek/Desktop/prueba_tecnica/Prueba_tecnica_/Prueba_tecnica_01/Views/Shared/_ValidationScriptsPartial.cshtml]

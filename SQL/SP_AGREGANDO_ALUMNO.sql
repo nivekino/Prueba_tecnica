@@ -8,7 +8,6 @@ BEGIN
 END
 
 EXEC spNUEVO_ALUMNO @nombre = 'Kevin', @apellido = 'Mejia';
-EXEC spNUEVO_ALUMNO @nombre = 'Edenilson', @apellido = 'Batres';
 EXEC spNUEVO_ALUMNO @nombre = 'Fernando', @apellido = 'Marinero';
 EXEC spNUEVO_ALUMNO @nombre = 'Paul', @apellido = 'Perez';
 

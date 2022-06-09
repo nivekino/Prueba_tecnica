@@ -8,11 +8,10 @@ BEGIN
 END
 
 
-EXEC spNUEVO_MAESTRO @nombre = 'Kevin', @apellido = 'Mejia';
-EXEC spNUEVO_MAESTRO @nombre = 'Edenilson', @apellido = 'Batres';
-EXEC spNUEVO_MAESTRO @nombre = 'Fernando', @apellido = 'Marinero';
-EXEC spNUEVO_MAESTRO @nombre = 'Paul', @apellido = 'Perez';
-EXEC spNUEVO_MAESTRO @nombre = 'Diego', @apellido = 'Maradonna';
+EXEC spNUEVO_MAESTRO @nombre = 'Jorge', @apellido = 'Ortiz';
+EXEC spNUEVO_MAESTRO @nombre = 'Reina', @apellido = 'Lopez';
+EXEC spNUEVO_MAESTRO @nombre = 'Rene', @apellido = 'Mejia';
+EXEC spNUEVO_MAESTRO @nombre = 'Diego', @apellido = 'Maradona';
 
 
 SELECT * FROM MAESTRO;

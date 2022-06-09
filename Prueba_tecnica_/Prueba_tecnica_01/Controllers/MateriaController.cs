@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Prueba_tecnica_01.Extensions;
 using Prueba_tecnica_01.Models;
 
 namespace Prueba_tecnica_01.Controllers
 {
-    public class MateriaController : Controller
+    public class MateriaController : BaseController
     {
         private readonly Colegio_prueba_tecnicaContext _context;
 
@@ -18,14 +19,12 @@ namespace Prueba_tecnica_01.Controllers
             _context = context;
         }
 
-        // GET: Materia
         public async Task<IActionResult> Index()
         {
             var colegio_prueba_tecnicaContext = _context.Materias.Include(m => m.IdProfesorNavigation);
             return View(await colegio_prueba_tecnicaContext.ToListAsync());
         }
 
-        // GET: Materia/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Materias == null)
@@ -44,14 +43,12 @@ namespace Prueba_tecnica_01.Controllers
             return View(materia);
         }
 
-        // GET: Materia/Create
         public IActionResult Create()
         {
             ViewData["IdProfesor"] = new SelectList(_context.Maestros, "Id", "Nombre");
             return View();
         }
 
-        // POST: Materia/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,NombreMateria,IdProfesor")] Materia materia)
@@ -60,13 +57,13 @@ namespace Prueba_tecnica_01.Controllers
             {
                 _context.Add(materia);
                 await _context.SaveChangesAsync();
+                basicNotification("Materia agregada correctamente!", notificationType.Success);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProfesor"] = new SelectList(_context.Maestros, "Id", "Id", materia.IdProfesor);
             return View(materia);
         }
 
-        // GET: Materia/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Materias == null)
@@ -79,11 +76,10 @@ namespace Prueba_tecnica_01.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdProfesor"] = new SelectList(_context.Maestros, "Nombre", "Nombre", materia.IdProfesor);
+            ViewData["IdProfesor"] = new SelectList(_context.Maestros, "Id", "Nombre", materia.IdProfesor);
             return View(materia);
         }
 
-        // POST: Materia/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,NombreMateria,IdProfesor")] Materia materia)
@@ -111,13 +107,13 @@ namespace Prueba_tecnica_01.Controllers
                         throw;
                     }
                 }
+                basicNotification("Materia actualizada correctamente!", notificationType.Success);
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdProfesor"] = new SelectList(_context.Maestros, "Nombre", "Nombre", materia.IdProfesor);
+            ViewData["IdProfesor"] = new SelectList(_context.Maestros, "Id", "Nombre", materia.IdProfesor);
             return View(materia);
         }
 
-        // GET: Materia/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Materias == null)
@@ -136,7 +132,6 @@ namespace Prueba_tecnica_01.Controllers
             return View(materia);
         }
 
-        // POST: Materia/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -152,6 +147,7 @@ namespace Prueba_tecnica_01.Controllers
             }
             
             await _context.SaveChangesAsync();
+            basicNotification("Materia eliminada correctamente!", notificationType.Success);
             return RedirectToAction(nameof(Index));
         }
 

@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Prueba_tecnica_01.Extensions;
 using Prueba_tecnica_01.Models;
 
 namespace Prueba_tecnica_01.Controllers
 {
-    public class AlumnoController : Controller
+    public class AlumnoController : BaseController
     {
         private readonly Colegio_prueba_tecnicaContext _context;
 
@@ -18,15 +19,14 @@ namespace Prueba_tecnica_01.Controllers
             _context = context;
         }
 
-        // GET: Alumno
         public async Task<IActionResult> Index()
         {
+            
               return _context.Alumnos != null ? 
                           View(await _context.Alumnos.ToListAsync()) :
                           Problem("Entity set 'Colegio_prueba_tecnicaContext.Alumnos'  is null.");
         }
 
-        // GET: Alumno/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Alumnos == null)
@@ -44,13 +44,12 @@ namespace Prueba_tecnica_01.Controllers
             return View(alumno);
         }
 
-        // GET: Alumno/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Alumno/Create
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Apellido")] Alumno alumno)
         {
@@ -58,12 +57,12 @@ namespace Prueba_tecnica_01.Controllers
             {
                 _context.Add(alumno);
                 await _context.SaveChangesAsync();
+                basicNotification("Alumno agregado correctamente!", notificationType.Success);
                 return RedirectToAction(nameof(Index));
             }
             return View(alumno);
         }
 
-        // GET: Alumno/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Alumnos == null)
@@ -79,7 +78,6 @@ namespace Prueba_tecnica_01.Controllers
             return View(alumno);
         }
 
-        // POST: Alumno/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Apellido")] Alumno alumno)
@@ -107,12 +105,12 @@ namespace Prueba_tecnica_01.Controllers
                         throw;
                     }
                 }
+                basicNotification("Alumno actualizado correctamente!", notificationType.Success);
                 return RedirectToAction(nameof(Index));
             }
             return View(alumno);
         }
 
-        // GET: Alumno/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Alumnos == null)
@@ -130,7 +128,6 @@ namespace Prueba_tecnica_01.Controllers
             return View(alumno);
         }
 
-        // POST: Alumno/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -146,6 +143,7 @@ namespace Prueba_tecnica_01.Controllers
             }
             
             await _context.SaveChangesAsync();
+            basicNotification("Alumno eliminado correctamente!", notificationType.Success);
             return RedirectToAction(nameof(Index));
         }
 
